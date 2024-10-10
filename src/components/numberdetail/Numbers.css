@@ -1,0 +1,82 @@
+.number-detail-grid {
+    font-family: Nunito;
+    display: grid;
+    grid-template-columns: auto auto; /* Hai cột tự động căn chỉnh theo nội dung */
+    grid-gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 92%;
+    margin-left: 10px;
+  }
+  
+  .number-detail-grid h3 {
+    grid-column: 1 / 3;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff9138;
+  }
+  
+  .number-detail-grid p {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .number-detail-grid strong {
+    font-weight: 600;
+    color: #282739;
+  }
+  .number-detail-grid p span {
+    font-weight: 400;
+    color: #535261;
+    margin-left: 10px;
+  }
+  .back-submit-button {
+    position: absolute;
+    width: 120px;
+    top: 130px;
+    right: 6px;
+    background-color: #FFF4E6;
+    color: #FF7506;
+    border: none;
+    padding: 20px 10px;
+    border-radius: 12px 0 0 12px;
+    cursor: pointer;
+    line-height: 1.2;
+    font-size: 16px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-submit-button img {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 8px;
+}
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 3.5px;
+  }
+  
+  .status-waiting {
+    background-color: #3498db; /* Màu xanh cho "Đang chờ" */
+  }
+  
+  .status-used {
+    background-color: #7f8c8d; /* Màu xám cho "Đã sử dụng" */
+  }
+  
+  .status-cancelled {
+    background-color: #E73F3F; /* Màu đỏ cho "Bỏ qua" */
+  }
+  
+  

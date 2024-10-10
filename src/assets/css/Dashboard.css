@@ -1,0 +1,89 @@
+.right-panel {
+    position: absolute; /* Allows overlapping */
+    top: 0; /* Aligns to the top */
+    right: 0; /* Aligns to the right */
+    width: 401px; /* Exact width */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* Ensures it's above the header */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    margin-left: 10px;
+}
+
+.welcome {
+    font-size: 16px;
+    color: #7E7D88;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.overview-section {
+    margin-bottom: 20px;
+}
+
+.overview-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-left {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.circle-progress {
+    font-size: 16px;
+    color: #ff6600;
+}
+
+.item-right .number {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-right .label {
+    font-size: 16px;
+    color: #ff6600;
+}
+
+.item-right .status {
+    font-size: 14px;
+    color: #7E7D88;
+}
+
+.calendar-section {
+    margin-top: 20px;
+}
+
+.calendar-section h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff7506;
+}

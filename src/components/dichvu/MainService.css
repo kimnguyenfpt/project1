@@ -1,0 +1,56 @@
+.services-container {
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+    margin-left: 10px;
+}
+.services-title{
+    margin-left: 4px;
+}
+.services-container .status.actives::before {
+    background-color: #34CD26;
+}
+
+.services-container .status.inactive::before {
+    background-color: red;
+}
+.service-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 10px 5px;
+    font-size: 16px;
+    table-layout: fixed;
+    margin-top: 20px;
+}
+.service-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.services-add {
+    display: flex;
+    position: fixed;
+    width: 90px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF2E7;
+    color: #ff7506;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: Nunito;
+    margin-top: 6%;
+    margin-left: 83.5%;
+}
+
+.services-add-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+}

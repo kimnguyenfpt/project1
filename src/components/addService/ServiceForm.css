@@ -1,0 +1,184 @@
+.service-form-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.service-header {
+  margin-bottom: 20px;
+}
+
+.service-header h2 {
+  color: #ff6700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.service-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.service-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-form-group.full-width {
+  grid-column: 1 / span 2;
+}
+
+.service-form-group label {
+  font-weight: bold;
+  color: #282739;
+  margin-bottom: 8px;
+}
+
+.service-form-group input,
+.service-form-group textarea {
+  outline: none;
+  padding: 8px;
+  color: #535261;
+  border: 1px solid #D4D4D7;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 130px;
+  width: 100%;
+}
+
+.service-form .full-height {
+  grid-row: span 2;
+}
+/* Update for Quy tắc cấp số layout */
+.service-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.service-header {
+  margin-bottom: 20px;
+}
+
+.service-header h2 {
+  color: #ff6700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.service-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.service-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-form-group.full-width {
+  grid-column: 1 / span 2;
+}
+
+.service-form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-form-group input,
+.service-form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 130px;
+  width: 100%;
+}
+
+.service-rule-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1 / span 2;
+  margin-left: -50px;
+}
+
+.service-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-rule label {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 80px; /* Giảm khoảng cách giữa checkbox và chữ */
+  width: 120px;
+}
+
+.service-rule input[type="text"] {
+  background-color: #fff;
+  color: #535261;
+  width: 61px;
+  padding: 8px;
+  border: 1px solid #D4D4D7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  margin-right: -40px;
+  transform: scale(1.1); 
+  accent-color: #4277FF;
+}
+
+.service-rule span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.service-note {
+  grid-column: 1 / span 2;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.service-actions {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.service-actions .service-cancel-btn,
+.service-actions .service-submit-btn {
+  background-color: #ff6700;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.service-actions .service-cancel-btn {
+  background-color: #f2f2f2;
+  color: #666;
+}
+
+.service-actions .service-submit-btn {
+  background-color: #ff6700;
+}
+

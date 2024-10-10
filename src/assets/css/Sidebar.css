@@ -1,0 +1,174 @@
+/* Fullscreen sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh; 
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures logout stays at the bottom */
+    padding-bottom: 20px; /* Space for logout at the bottom */
+}
+
+/* Logo container styling */
+.logo {
+    text-align: center;
+    padding: 20px 0; /* Adjusted padding */
+}
+
+/* Adjusted logo size for better display */
+.logo .logo-Alta {
+    width: 80px;
+    height: auto;
+    margin-top: 50px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    margin-top: -90%;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    font-size: 16px;
+    color: #7E7D88;
+    text-decoration: none;
+}
+
+nav ul li a .icon {
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #FFF4E6; 
+    color: #ff6600; 
+    width: 100%; 
+    transition: all 0.3s ease;
+}
+nav ul li a:hover .icon {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(360deg) brightness(100%) contrast(100%);
+    filter: brightness(0) saturate(100%) invert(38%) sepia(100%) saturate(1000%) hue-rotate(360deg) brightness(100%) contrast(100%); /* Điều chỉnh bộ lọc để đạt màu #ff6600 */
+}
+
+/* Logout button styling */
+.logout-btn {
+    background-color: #fff3e4;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    margin: 0 auto; /* Centers the logout button */
+}
+
+.logout-btn svg {
+    margin-right: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #ffe4cc;
+}
+
+.logout-btn span {
+    color: #ff7506;
+    font-family: Nunito;
+    font-size: 16px;
+}
+/* Dropdown menu styling */
+.dropdown-menu {
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 100%;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none; 
+    width: 200px; 
+}
+/* Dropdown menu items */
+.dropdown-menu li {
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0; 
+}
+
+nav ul li a.active {
+    background-color: #fff3e4; /* Orange background */
+    color: #ff7506; /* Orange text */
+    padding: 10px 0;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Orange background for the active dropdown item */
+.dropdown-menu li.active {
+    background-color: #fff3e4;
+    color: #ff7506;
+}
+
+/* Aligning the submenu items */
+.dropdown-menu li + li {
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Hover effects for the dropdown items */
+.dropdown-menu li:hover {
+    background-color: #fff3e4;
+    color: #ff7506;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .logo .logo-Alta {
+        width: 80px;  /* Adjust for smaller screens */
+    }
+}
+.active {
+    background-color: #FF7506; /* Nền màu cam */
+    color: #fff; /* Chữ màu trắng */
+}
+.sidebar nav ul li.active a {
+    background-color: #ff7506;
+    color: #fff;
+    font-weight: bold;
+}
+.sidebar nav ul li.active a .icon {
+    filter: brightness(0) invert(1); /* Đổi màu icon thành trắng */
+    color: #fff; 
+}

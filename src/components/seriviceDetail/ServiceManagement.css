@@ -1,0 +1,328 @@
+.service-management-container {
+    display: flex;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.service-info {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-info h2 {
+    color: #ff7506;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service-details p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.numbering-rules h3 {
+    color: #ff7506;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rule-label {
+    font-size: 16px;
+    color: #333;
+    width: 100px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+p.reset-label {
+    font-size: 16px;
+    color: #282739;
+    font-weight: bold;
+}
+
+.small-input {
+    width: 60px;
+    height: 34px;
+    color: #535261;
+    padding: 6px;
+    border: 1px solid #D4D4D7;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.to-label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Right Panel: Service Management Table */
+.service-management-table {
+    width: 85%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-filter-section {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp ngang */
+    justify-content: space-between;
+    /* Cách đều các phần tử */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới cùng */
+}
+
+.select-container,
+.date-picker-container,
+.keyword-input {
+    flex: 1;
+    /* Để các phần tử chiếm không gian đều nhau */
+    margin-right: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.date-picker-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.date-picker-wrapper {
+    display: flex;
+    /* Sắp xếp các phần tử trong container */
+    align-items: center;
+    /* Căn giữa các phần tử */
+}
+
+
+.arrow {
+    font-size: 18px;
+    /* Kích thước chữ cho mũi tên */
+    color: #ff7506;
+    /* Màu chữ cho mũi tên */
+    margin: 0 10px;
+    /* Khoảng cách giữa mũi tên và ô chọn ngày */
+}
+
+.keyword-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-filter-section select {
+    font-family: Nunito;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #535261;
+    /* Màu chữ */
+    background-color: #fff;
+    /* Màu nền */
+    appearance: none;
+    /* Ẩn mũi tên mặc định */
+    background-image: url('../../../public/img/Vector.png');
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh */
+    background-position: right 10px center;
+}
+
+.new-filter-section .custom-keyword-input {
+    padding: 10px;
+    /* Khoảng cách bên trong */
+    border: 1px solid #ccc;
+    /* Đường viền */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #A9A9B0;
+    /* Màu chữ */
+    opacity: 0.6;
+    background-color: #fff;
+    /* Màu nền */
+    appearance: none;
+    /* Ẩn mũi tên mặc định */
+    background-image: url('../../../public/img/search.png');
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh */
+    background-position: right 10px center;
+}
+
+.mana-date-picker {
+    padding: 10px;
+    padding-left: 40px;
+    color: #A9A9B0;
+    background-color: #fff;
+    /* Nền trắng */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: url('../../../public//img/calendar.png') no-repeat 10px center;
+    /* Biểu tượng lịch */
+    background-size: 20px 20px;
+    width: 150px;
+    /* Điều chỉnh chiều rộng nếu cần */
+}
+
+.new-filter-section select:focus {
+    outline: none;
+    /* Ẩn viền khi chọn */
+    border-color: #ff7f50;
+    /* Đổi màu viền khi chọn */
+}
+
+/* tabe */
+.service-table {
+    width: 100%;
+    margin-left: -5px;
+    border-collapse: collapse;
+}
+
+.service-table th,
+.service-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.service-table th {
+    background-color: #FF9138;
+    /* Màu nền cho tiêu đề */
+    color: white;
+    /* Màu chữ cho tiêu đề */
+}
+
+.service-table tr:nth-child(even) {
+    background-color: #FFF2E7;
+    /* Màu nền cho hàng chẵn */
+}
+
+.service-table tr:nth-child(odd) {
+    background-color: #FFFFFF;
+    /* Màu nền cho hàng lẻ */
+}
+
+
+
+
+
+.service-buttons-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F6F6;
+    /* Light peach background */
+    padding: 10px;
+    border-radius: 12px;
+    width: 140px;
+    /* Width of the button section */
+}
+
+.primary-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px 0;
+    margin: 5px 0;
+    font-size: 16px;
+    margin-top: -10px;
+    /* Thêm các thuộc tính khác nếu cần */
+}
+
+.primary-btn {
+    background-color: #FFF2E7;
+    color: #ff7506;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-button {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+
+
+.service-status::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.service-status.complete::before {
+    background-color: #34CD26 !important;
+}
+
+.service-status.in-progress::before {
+    background-color: #5490EB !important;
+}
+
+.service-status.absent::before {
+    background-color: #6C7585 !important;
+}
+
+.service-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+.service-pagination span {
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #7E7D88;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service-pagination-page.active {
+    background-color: #FF7506;
+    color: white;
+    font-weight: bold;
+}
+
+.service-pagination-page {
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+
+.service-pagination-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}

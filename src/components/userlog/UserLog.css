@@ -1,0 +1,59 @@
+.log-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 70px;
+    margin-top: 15px;
+}
+
+.log-pagination span {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #F6F6F6;
+    color: #7E7D88;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.log-pagination-page.active {
+    background-color: #FF7506;
+    color: white;
+    font-weight: bold;
+}
+
+.log-pagination-page {
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+
+.log-pagination-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.log-arrow-icon {
+    width: 12px;
+    height: 12px;
+}
+.log-table th:first-child {
+    width: 266px;
+}
+.log-table th:nth-child(2) {
+    width: 250px;
+}
+.log-table th:nth-child(3) {
+    width: 216px;
+}
+.log-table th:last-child {
+    width: 336px;
+}
+.log-table td:nth-child(3), .log-table td:nth-child(4) {
+    text-align: left;
+} 

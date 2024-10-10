@@ -1,0 +1,15 @@
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.content {
+    width: calc(100% - 210px); /* Chiều rộng tính toán dựa trên việc trừ phần Sidebar */
+    padding: 20px; /* Khoảng cách bên trong */
+    margin-left: 210px; /* Căn lề trái để tránh đè lên Sidebar */
+    background-color: #f6f6f6; /* Màu nền cho content */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}

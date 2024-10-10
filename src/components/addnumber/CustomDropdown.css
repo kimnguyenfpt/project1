@@ -1,0 +1,52 @@
+/* my-app/src/components/addnumber/CustomDropdown.css */
+
+.custom-dropdown {
+    position: relative;
+    width: 400px; /* Chiều rộng của dropdown */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+  }
+  
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #D4D4D7; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #fff; /* Màu nền */
+    cursor: pointer; /* Con trỏ chuột */
+    color: #7E7D88;
+  }
+  .dropdown-arrow {
+    width: 10px; /* Chiều rộng mũi tên */
+    height: 10px; /* Chiều cao mũi tên */
+    background-size: contain; /* Kích thước hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Bo góc */
+    background-color: #fff; /* Màu nền */
+    z-index: 1000; /* Đảm bảo danh sách nằm trên các phần tử khác */
+    max-height: 200px; /* Chiều cao tối đa */
+    overflow-y: auto; /* Cuộn dọc nếu quá nhiều mục */
+  }
+  
+  .dropdown-list-item {
+    padding: 10px; /* Khoảng cách cho từng mục */
+    cursor: pointer; /* Con trỏ chuột */
+  }
+  
+  .dropdown-list-item:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+  }
+  /* CustomDropdown.css */
+.dropdown-list-item.highlighted {
+    background-color: #FFF2E7; /* Màu nền khi được chọn */
+    color: #000; /* Màu chữ khi được chọn */
+}

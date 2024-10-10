@@ -1,0 +1,242 @@
+.right-panel {
+    padding: 20px;
+
+    width: 401px;
+}
+
+.overview-section {
+    margin-top: 20px;
+}
+
+.overview-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FF7506; /* Orange title */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.device-stats {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 26px;
+    color: #535261;
+    font-weight: bold;
+}
+
+.icon-image {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.label-icon {
+    font-size: 14px;
+    color: #FF7506; /* Orange for Thiết bị */
+}
+
+.label-icon.blue {
+    color: #3B82F6; /* Blue for Dịch vụ */
+}
+
+.label-icon.green {
+    color: #22C55E;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-item {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.active-devices,
+.inactive-devices {
+    color: #7E7D88;
+    font-size: 14px;
+}
+.green-active-devices{
+    margin-left: 5px;
+    color: #7E7D88;
+    font-size: 14px;
+}
+.orange-text {
+    color: #FF7506;
+    font-weight: bold;
+}
+
+.blue-text {
+    color: #3B82F6;
+    font-weight: bold;
+}
+
+.green-text {
+    font-weight: bold;
+    color: #35C75A;
+}
+/* Container for the calendar */
+.calendar-section {
+    margin-top: -5px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+/* Calendar itself */
+.custom-calendar {
+    height: 350px !important;  /* Force the height with !important */
+    width: 361px !important;   /* Force the width with !important */
+    font-family: 'Nunito';
+    border: none;
+}
+
+.react-calendar {
+    height: 100% !important;
+    width: 100% !important;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.react-calendar__navigation {
+    position: relative;
+    padding-bottom: 15px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.react-calendar__navigation__label {
+    text-align: center;
+    flex-grow: 1; 
+    font-size: 18px; 
+}
+
+.react-calendar__navigation button {
+    background: none;
+    font-family: Nunito;
+    border: none;
+    font-size: 20px; 
+    font-weight: bold;
+    color: #FF8800; 
+    cursor: pointer;
+    width: 30px;
+    height: 30px; 
+}
+
+.react-calendar__navigation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #D3D3D3; 
+}
+.react-calendar__navigation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #D3D3D3; 
+}
+.react-calendar__navigation__label {
+    display: inline-block; 
+    white-space: nowrap;
+    text-align: center;
+    font-size: 18px; 
+    color: #FF8800;
+}
+
+.react-calendar__navigation button:enabled:hover, 
+.react-calendar__navigation button:enabled:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;  
+    outline: none; 
+}
+.react-calendar__month-view__weekdays {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FF9138; /* Keep the desired color */
+    text-decoration: none !important; /* Remove any underline or decoration */
+    border-bottom: none !important; /* Ensure no border appears */
+    outline: none !important; /* Ensure no outline or focus border */
+    text-decoration-style: none !important; /* Remove dotted or other decoration styles */
+}
+
+.react-calendar__month-view__weekdays abbr {
+    text-decoration: none !important; /* Remove text decoration from abbreviations */
+    border-bottom: none !important; /* Ensure abbr has no border */
+}
+
+
+.react-calendar__tile {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+    background-color: transparent; 
+    transition: none;
+}
+
+/* Remove hover background */
+.react-calendar__tile:hover {
+    background-color: white !important; 
+    box-shadow: none !important; 
+    cursor: pointer; 
+}
+
+/* First four neighboring days (previous month) with specific color */
+.react-calendar__tile--neighboringMonth {
+    color: #7E7D88 !important; /* Apply custom color to neighboring month days */
+}
+
+.react-calendar__tile--now {
+    background-color: #FF8800;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.react-calendar__tile--active {
+    background-color: #FF7506 !important; 
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.react-calendar__tile--active:hover{
+    background-color: #FF7506 !important; 
+    color: white !important;
+}

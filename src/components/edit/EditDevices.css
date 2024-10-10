@@ -1,0 +1,36 @@
+.service-box {
+    border: 1px solid #FFA451;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFF5E5; /* Màu nền sáng để phân biệt box */
+    margin-top: 10px;
+    min-height: 50px; /* Đảm bảo box có chiều cao để hiển thị */
+  }
+  
+  .tag-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    background-color: #FFA451;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .tag button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

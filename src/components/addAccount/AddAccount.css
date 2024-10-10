@@ -1,0 +1,103 @@
+.add-account-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.add-account-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-account-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.add-account-form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    position: relative;
+}
+
+.add-account-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-account-input,
+.add-account-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.add-account-form-group select {
+    width: 100%; /* Full width */
+    padding: 12px 20px; /* Padding for content */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    appearance: none; /* Remove default arrow */
+    background-color: white;
+    background-image: url('../../../public/img/Vector.png'); /* Path to your arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Positioning the arrow */
+    background-size: 12px 8px; /* Size of the arrow icon */
+    cursor: pointer;
+  }
+.add-account-input[type="password"] {
+    font-family: 'password';
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.add-account-form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-account-cancel-button,
+.add-account-submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.add-account-cancel-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.add-account-submit-button {
+    background-color: #ff9800;
+    color: white;
+}
+
+  .password-input-group {
+    position: relative;
+  }
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 36px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}

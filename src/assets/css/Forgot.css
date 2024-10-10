@@ -1,0 +1,112 @@
+/* Main container for the reset page */
+.forgot-password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* Left section: Form container */
+.forgot-password-form {
+    width: 35%;
+    height: 100%;
+    padding: 50px;
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+.forgot-password-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Form title */
+.forgot-password-form p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Label styling */
+.forgot-password-form label {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Email input field styling with fixed width of 400px */
+.forgot-password-form input[type="email"] {
+    width: 430px; /* Updated width */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 18px;
+}
+.forgot-password-form input[type="email"]:focus{
+    outline: none;
+    color: #535261;
+    border: 2px solid #D4D4D7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Cancel button styling */
+.cancel-button {
+    background-color: transparent;
+    color: #f48120;
+    border: 1px solid #f48120;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+/* Continue button styling */
+.continue-button {
+    background-color: #f48120;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Right section: Image container */
+.forgot-password-image {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the image */
+.forgot-password-image img {
+    width: 75%;
+    object-fit: cover;
+}
+
+strong .forgot-password-message{
+    color: red;
+}

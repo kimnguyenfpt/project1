@@ -1,0 +1,158 @@
+/* Container styling for the form */
+.device-form-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h2 {
+    text-align: left;
+    color: #FF7506;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #FF7506;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Styling for the form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Each row in the form that contains input fields */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Styling for individual form group (label + input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Two fields per row */
+}
+
+/* Full-width input for specific fields */
+.form-group.full-width {
+    width: 100%; /* Make the group span the full width */
+}
+
+/* Label styling */
+label {
+    font-weight: 600; /* Make the font bold */
+    margin-bottom: 8px;
+    font-size: 16px; /* Adjust the font size */
+    color: #333; /* Dark color for the label text */
+    display: inline-block;
+    position: relative;
+}
+
+/* Asterisk styling for required fields (only apply to specific labels) */
+label.required:after {
+    content: " *"; /* Add an asterisk after the label */
+    color: #FF0000; /* Red color for the asterisk */
+    font-size: 16px; /* Same size as the label */
+    position: absolute;
+    margin-left: 2px; /* Add space between label and asterisk */
+}
+
+/* Input and Select fields */
+input.add,
+select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #D4D4D7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 100%;
+    color: #000; /* Text color inside the input */
+    background-color: #fff;
+}
+
+/* Placeholder text color */
+input.add::placeholder {
+    color: #A9A9B0; /* Set the placeholder color */
+}
+
+/* Focus styling for inputs */
+input.add:focus,
+select:focus {
+    outline: none;
+}
+
+/* Styling for the select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #A9A9B0;
+    appearance: none; /* Remove default arrow */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0671b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Change border and arrow color when focused */
+select:focus {
+    outline: none;
+    border: 1px solid #FFAC6A;
+}
+
+/* Styling for the note section */
+.form-note {
+    font-size: 14px;
+    color: #A9A9B0;
+    margin-top: 20px;
+}
+
+/* Styling for the required asterisk in the note */
+.required-asterisk {
+    color: #FF0000; /* Red color for the asterisk */
+}
+
+/* Action buttons */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cancel button styling */
+.add-cancel-button {
+    background-color: #FFF2E7;
+    color: #FF7506;
+    border: 1px solid #FF9138;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+/* Submit button styling */
+.add-submit-button {
+    background-color: #FF9138;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 8px;
+}

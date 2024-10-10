@@ -1,0 +1,187 @@
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 300px;
+}
+
+/* Định dạng chung cho các trường nhập */
+.keyword-search input,
+.custom-input-with-icon {
+    padding: 10px;
+    color: #535261;
+    background-color: #fff; /* Màu nền trắng */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 300px;
+}
+.status-select{
+    width: 300px;
+    background-image: url('../../../public/img/Vector.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 8px;
+    padding-right: 40px;
+}
+.search{
+    width: 300px;
+    background-image: url('../../../public/img/search.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    padding-right: 40px;
+}
+/* Định dạng placeholder */
+.keyword-search input::placeholder {
+    color: #535261;
+}
+/* Điều chỉnh mũi tên khi focus */
+.status-select:focus {
+    outline: none; /* Loại bỏ viền focus mặc định */
+    border-color: #ff7506; /* Tùy chỉnh màu viền khi chọn */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item.selected {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+/* Định dạng cho trường ngày */
+.date-picker {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    gap: 10px;
+}
+
+/* Định dạng chung cho các trường ngày với biểu tượng lịch */
+.custom-input-with-icon {
+    padding: 10px;
+    padding-left: 40px;
+    color: #A9A9B0;
+    background-color: #fff; /* Nền trắng */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: url('../../../public//img/calendar.png') no-repeat 10px center; /* Biểu tượng lịch */
+    background-size: 20px 20px;
+    width: 150px; 
+}
+
+.arrow-icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+
+/* Tùy chỉnh phần header và điều hướng của react-datepicker */
+.react-datepicker__header {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+.react-datepicker__current-month {
+    color: #FF7506; /* Màu cam cho tháng */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center; /* Căn giữa tháng */
+}
+
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+    top: 10px; /* Căn chỉnh nút điều hướng */
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    width: 2.5rem; /* Kích thước cho ngày */
+    line-height: 2.5rem;
+    text-align: center; /* Căn giữa các ngày */
+}
+
+.react-datepicker__day--selected {
+    background-color: #FF7506; /* Màu cam cho ngày được chọn */
+    border-radius: 8px; /* Bo góc nhẹ */
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: #FF7506; /* Màu cam khi dùng bàn phím chọn */
+    border-radius: 8px; /* Bo góc nhẹ */
+}
+
+.react-datepicker__navigation-icon::before {
+    content: '‹';
+    color: #FF7506; /* Màu cam cho nút điều hướng */
+    font-size: 18px; /* Kích thước của mũi tên */
+}
+
+.react-datepicker__navigation--next .react-datepicker__navigation-icon::before {
+    content: '›';
+    color: #FF7506; /* Màu cam cho nút điều hướng */
+    font-size: 18px; /* Kích thước của mũi tên */
+}
+
+/* Đảm bảo toàn bộ mũi tên điều hướng có nền trong suốt và không bị ảnh hưởng bởi màu nền */
+.react-datepicker__navigation {
+    background: transparent; /* Nền trong suốt cho nút điều hướng */
+    border: none;
+}
+
+.keyword-search {
+    display: flex;
+    align-items: center;
+}
+
+input[type="date"] {
+    border: none; 
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #A9A9B0;
+    flex: 1;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.search-icon {
+    position: relative;
+    right: 38px;
+    width: 20px;
+    height: 20px;
+}
+
+.react-datepicker__input-container {
+    background-color: #fff;
+    width: 150px;
+}
+
+.react-datepicker__month-container {
+    text-align: right;
+}

@@ -1,0 +1,115 @@
+/* my-app/src/components/addnumber/NewNumber.css */
+
+.new-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 704px; 
+  border-radius: 16px;
+  max-width: 100%;
+  background-color: #fff; /* Màu nền */
+}
+
+h1 {
+  font-size: 56px;
+  color: #FF7506;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 20px;
+  color: #535261;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.cancel-btn, .print-btn {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #FFF2E7; /* Màu nền nút hủy */
+  border: 1px solid #FF9138;
+  color: #FF9138; /* Màu chữ nút hủy */
+}
+
+.print-btn {
+  background-color: #FF9138;
+  color: white;
+}
+/* Modal CSS */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h5{
+  font-size: 32px;
+  color: #535261;
+  font-weight: bold;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.modal-service{
+  font-size: 18px;
+  color: #282739;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+.modal-service span{
+  font-weight: bold;
+  
+}
+.modal-content {
+  background-color: white;
+  padding: 10px;
+  margin-left: 10%;
+  margin-top: -10%;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-content h1 {
+  color: #FF9138;
+  font-size: 48px;
+}
+.modal-footer {
+  background-color: #FF9138;
+  padding: 15px; 
+  color: white;
+  border-radius: 0 0 10px 10px; /* Bo tròn chỉ góc dưới của box */
+  text-align: center;
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng của modal */
+  box-sizing: border-box; /* Bao gồm cả padding trong kích thước tổng */
+}
+.modal-footer p{
+  color: #fff;
+  font-size: 20px;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FF9138;
+}

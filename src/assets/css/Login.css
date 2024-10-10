@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.login-form {
+    width: 40%; 
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form form label {
+    margin: 10px 0;
+    color: #282739;
+    font-weight: 600;
+    text-align: left;
+    width: 100%;
+    margin-left: 120px;
+}
+.login-image {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.login-image img {
+    width: 60%;
+    margin-left: 150px;
+    object-fit: cover;
+}
+
+.logo img {
+    width: 170px;
+    height: 136px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+    position: relative;
+    width: 400px;
+}
+.input-container input.error {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.eye-icon {
+    color: #7E7D88;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+button {
+    width: 162px;
+    padding: 12px;
+    background-color: #FF9138;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    align-self: center; 
+}
+
+.error-message {
+    color: #E73F3F;
+    font-size: 14px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 120px;
+}
+
+.error-message i {
+    margin-right: 5px;
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-top: -65px;
+    display: inline-block;
+    color: #E73F3F;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    width: 100%;
+    margin-left: 120px;
+}
+
+.error-forgot-password {
+    color: #E73F3F; 
+    margin-top: 15px;
+    display: inline-block;
+    width: 100%;
+    margin-left: 80%;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+h2{
+    margin-left: 5px;
+    color: #FF7506;
+    margin-bottom: 20px;
+}
+.system-text {
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.management-text {
+    font-size: 36px;
+    font-weight: bolder;
+}

@@ -1,0 +1,133 @@
+/* MainRole.css */
+.roles {
+    width: 100%;
+    padding: 10px;
+    font-family: Nunito;
+}
+.roles-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    margin-bottom: 10px;
+}
+.roles-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(212, 212, 215, 1);
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-right: 80px;
+}
+.roles-label {
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+    color: #2B2B3F;
+    margin-right: 20%;
+}
+
+.roles-search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 250px;
+    font-size: 16px;
+}
+.roles-search input::placeholder{
+    color: rgba(169, 169, 176, 1)
+}
+.roles-search img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.roles-table-container {
+    position: realative;
+}
+
+.roles-table {
+    width: 95%;
+    border-collapse: collapse;
+}
+
+.roles-table table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.roles-table th {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+.roles-table td{
+    padding: 10px;
+}
+.roles-table td::last-child {
+    text-align: center;
+}
+
+.roles-table thead {
+    background-color: #FF9138;
+    color: #fff;
+}
+
+.roles-table tbody tr {
+    background-color: #fff;
+}
+
+.roles-table tbody tr:nth-child(even) {
+    background-color: #FFF2E7;
+}
+
+.roles-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+.roles-table th:nth-child(2),
+.roles-table td:nth-child(2) {
+  width: 270px; 
+}
+.roles-table th:nth-child(3),
+.roles-table td:nth-child(3) {
+  width: 600px; 
+}
+.roles-table td:nth-child(3) {
+    text-align: left;
+}
+.roles-table tbody td {
+    border-bottom: 1px solid #ddd;
+    color: #535261;
+}
+.roles-table th:first-child {
+    width: 270px;
+}
+/* Điều chỉnh kích thước cột cuối của thead */
+.roles-table th:last-child {
+    width: 240px;
+}
+
+
+.roles-add {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF2E7;
+    color: #ff7506;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 6%;
+    margin-left: 82%;
+}
+
+.roles-add-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+}

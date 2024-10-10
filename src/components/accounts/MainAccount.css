@@ -1,0 +1,201 @@
+/* Container for the whole accounts page */
+.accounts-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+/* Filters container: dropdown and input field with labels */
+.accounts-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 96%;
+}
+
+.accounts-filter-group {
+    position: relative; /* Add relative positioning to the parent */
+    display: flex;
+    flex-direction: column; /* Ensure the label is above the input/select */
+    width: 400px; /* Adjust width so it looks balanced */
+    margin-bottom: 20px;
+}
+
+.accounts-filter-group label {
+    margin-bottom: 5px; /* Add space between the label and the input/select */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Input field with search icon inside */
+.accounts-search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 40px; /* Add space for the search icon */
+    
+    background-image: url('../../../public/img/search.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position icon inside the input */
+    background-size: 20px 20px; /* Adjust icon size */
+}
+
+/* Select dropdown */
+.accounts-filters select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%; /* Full width of the parent */
+    background-image: url('../../../public/img/Vector.png');
+}
+
+/* Table styling */
+.user-table {
+    width: 96%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.user-table th, .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f39c12;
+    color: white;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.user-table td:last-child {
+    text-align: center;
+}
+.user-table th:first-child {
+    width: 150px;
+}
+.user-table th:nth-child(2), 
+.user-table td:nth-child(2) {
+    width: 180px; /* Adjust this percentage or px as needed */
+}
+.user-table th:nth-child(3), 
+.user-table td:nth-child(3) {
+    width: 130px; /* Adjust this percentage or px as needed */
+}
+.user-table th:nth-child(4), 
+.user-table td:nth-child(4) {
+    width: 255px; /* Adjust this percentage or px as needed */
+}
+.user-table th:nth-child(5), 
+.user-table td:nth-child(5) {
+    width: 114px; /* Adjust this percentage or px as needed */
+}
+.user-table th:nth-child(6), 
+.user-table td:nth-child(6) {
+    width: 193px; /* Adjust this percentage or px as needed */
+}
+/* Center-align the last header */
+.user-table th:last-child {
+    width: 90px;
+    text-align: center;
+}
+.user-table td a {
+    text-decoration: underline;
+}
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.accounts-container .status.actives::before {
+    background-color: #34CD26;
+}
+
+.accounts-container .status.inactive::before {
+    background-color: red;
+}
+.accounts-add {
+    display: flex;
+    position: absolute;
+    width: 86px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF2E7;
+    color: #ff7506;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 83.5%;
+    margin-top: 5%;
+}
+
+.accounts-add-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.accounts-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 70px;
+}
+
+.accounts-pagination span {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #F6F6F6;
+    color: #7E7D88;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accounts-pagination-page.active {
+    background-color: #FF7506;
+    color: white;
+    font-weight: bold;
+}
+
+.accounts-pagination-page {
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+
+.accounts-pagination-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.accounts-arrow-icon {
+    width: 12px;
+    height: 12px;
+}
