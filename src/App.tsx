@@ -25,6 +25,7 @@ import Account from './components/accounts/Account';
 import AddAccount from './components/addAccount/AddAccount';
 import UpdateAccount from './components/UpdateAccount/UpdateAccount';
 import UserLog from './components/userlog/UserLog';
+import Report from './components/baocao/Report';
 
 
 const App: React.FC = () => {
@@ -63,7 +64,8 @@ const App: React.FC = () => {
           {/* User Log */}
           <Route path="/user-logs" element={<UserLog />} />
 
-
+          {/* Report */}
+          <Route path="/reports" element={<Report />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/reset" element={<ResetPassword />} />

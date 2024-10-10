@@ -49,8 +49,8 @@ const Sidebar: React.FC = () => {
                             Cấp số
                         </Link>
                     </li>
-                    <li className={isActive('/report') ? 'active' : ''}>
-                        <Link to="/report">
+                    <li className={isActive('/reports') ? 'active' : ''}>
+                        <Link to="/reports">
                             <img src="/img/report.png" alt="Report Icon" className="icon" />
                             Báo cáo
                         </Link>
