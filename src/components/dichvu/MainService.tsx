@@ -71,7 +71,7 @@ const MainService: React.FC = () => {
       <div className="services-buttons-section" onClick={handleAddService}>
         <button className="services-add">
           <img src="/img/btn-add.png" alt="" className="services-add-icon" />
-          Thêm tài khoản
+          Thêm dịch vụ
         </button>
       </div>
 

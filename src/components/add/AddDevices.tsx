@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { db } from "../../firebase/FirebaseConfig"; 
-import {  setDoc, doc, getDoc } from "firebase/firestore"; 
+import { setDoc, doc, getDoc } from "firebase/firestore"; 
+import { useDispatch } from "react-redux";
+import { addDevice } from "../../redux/deviceSlice"; 
 import { useNavigate } from "react-router-dom";
+import { AppDispatch } from "../../redux/store"; 
 import "./AddDevices.css";
 
 const AddDevices: React.FC = () => {
@@ -14,8 +17,7 @@ const AddDevices: React.FC = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-
-  
+  const dispatch: AppDispatch = useDispatch(); 
   const navigate = useNavigate();
 
   const handleCancel = () => {
@@ -27,15 +29,15 @@ const AddDevices: React.FC = () => {
     try {
       // Đảm bảo deviceCode là duy nhất
       const deviceRef = doc(db, "devices", deviceCode);
-
+  
       // Kiểm tra xem tài liệu có tồn tại không trước khi thêm mới
       const docSnapshot = await getDoc(deviceRef);
       if (docSnapshot.exists()) {
-        alert("Mã thiết bị đã tồn tại!");
+        alert("Mã thiết bị đã tồn tại! Vui lòng nhập mã khác.");
         return;
       }
-
-      // Sử dụng setDoc để thêm thiết bị mới
+  
+      // Nếu mã thiết bị không tồn tại, thêm thiết bị mới vào Firestore
       await setDoc(deviceRef, {
         name: deviceName,
         ip: ipAddress,
@@ -46,7 +48,7 @@ const AddDevices: React.FC = () => {
         connection: "Kết nối", 
         status: "Hoạt động", 
       });
-
+  
       // Reset form sau khi thêm thành công
       setDeviceCode("");
       setDeviceName("");
@@ -56,11 +58,17 @@ const AddDevices: React.FC = () => {
       setUsername("");
       setPassword("");
       setError(null);
+  
+      // Sau khi thêm thành công, điều hướng về danh sách thiết bị
+      alert("Thiết bị đã được thêm thành công!");
+      navigate('/devices');
+  
     } catch (error) {
       setError("Có lỗi xảy ra khi thêm thiết bị");
       console.error("Có lỗi xảy ra khi thêm thiết bị:", error);
     }
   };
+  
 
   return (
     <>
@@ -70,9 +78,9 @@ const AddDevices: React.FC = () => {
         <form id="device-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
-            <label htmlFor="service-code">
-              Mã thiết bị: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Mã thiết bị: <span className="required">*</span>
+              </label>
               <input
                 className="add"
                 type="text"
@@ -83,9 +91,9 @@ const AddDevices: React.FC = () => {
               />
             </div>
             <div className="form-group">
-            <label htmlFor="service-code">
-              Loại thiết bị: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Loại thiết bị: <span className="required">*</span>
+              </label>
               <select
                 value={deviceType}
                 onChange={(e) => setDeviceType(e.target.value)}
@@ -100,9 +108,9 @@ const AddDevices: React.FC = () => {
 
           <div className="form-row">
             <div className="form-group">
-            <label htmlFor="service-code">
-              Tên thiết bị: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Tên thiết bị: <span className="required">*</span>
+              </label>
               <input
                 className="add"
                 type="text"
@@ -113,9 +121,9 @@ const AddDevices: React.FC = () => {
               />
             </div>
             <div className="form-group">
-            <label htmlFor="service-code">
-              Tên đăng nhập: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Tên đăng nhập: <span className="required">*</span>
+              </label>
               <input
                 className="add"
                 type="text"
@@ -129,9 +137,9 @@ const AddDevices: React.FC = () => {
 
           <div className="form-row">
             <div className="form-group">
-            <label htmlFor="service-code">
-              Địa chỉ IP: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Địa chỉ IP: <span className="required">*</span>
+              </label>
               <input
                 className="add"
                 type="text"
@@ -142,9 +150,9 @@ const AddDevices: React.FC = () => {
               />
             </div>
             <div className="form-group">
-            <label htmlFor="service-code">
-              Mật khẩu: <span className="required">*</span>
-            </label>
+              <label htmlFor="service-code">
+                Mật khẩu: <span className="required">*</span>
+              </label>
               <input
                 className="add"
                 type="password"
@@ -157,7 +165,7 @@ const AddDevices: React.FC = () => {
           </div>
 
           <div className="form-group full-width">
-          <label htmlFor="service-code">
+            <label htmlFor="service-code">
               Dịch vụ sử dụng: <span className="required">*</span>
             </label>
             <input
@@ -170,16 +178,14 @@ const AddDevices: React.FC = () => {
             />
           </div>
 
-          {/* Note section */}
           <p className="form-note">
-            <span className="required-asterisk">*</span> Là trường thông tin bắt
-            buộc
+            <span className="required-asterisk">*</span> Là trường thông tin bắt buộc
           </p>
         </form>
       </div>
-      {/* Buttons moved outside the form */}
-      <div className="form-actions" onClick={handleCancel}>
-        <button type="button" className="add-cancel-button">
+
+      <div className="form-actions">
+        <button type="button" className="add-cancel-button" onClick={handleCancel}>
           Hủy bỏ
         </button>
         <button type="submit" form="device-form" className="add-submit-button">

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
+import { collection, getDocs, doc, updateDoc, addDoc } from "firebase/firestore";
 import { db } from "../firebase/FirebaseConfig";
 
 interface Device {
@@ -23,29 +23,60 @@ const initialState: DeviceState = {
   error: null,
 };
 
-// Thunk to fetch device data from Firestore
 export const fetchDevices = createAsyncThunk("devices/fetchDevices", async () => {
-  const querySnapshot = await getDocs(collection(db, "devices"));
-  const devices: Device[] = [];
-  querySnapshot.forEach((doc) => {
-    devices.push({ id: doc.id, ...doc.data() } as Device);
-  });
-  return devices;
+  try {
+    const querySnapshot = await getDocs(collection(db, "devices"));
+    const devices: Device[] = [];
+    querySnapshot.forEach((doc) => {
+      devices.push({ id: doc.id, ...doc.data() } as Device);
+    });
+    return devices;
+  } catch (error) {
+    console.error("Error fetching devices: ", error);
+    throw error; // Throw error để Redux biết và xử lý trạng thái rejected
+  }
 });
 
-// Thunk to update device data in Firestore
 export const updateDevice = createAsyncThunk(
   "devices/updateDevice",
   async (device: Device) => {
-    const deviceRef = doc(db, "devices", device.id);
-    await updateDoc(deviceRef, {
-      name: device.name,
-      ip: device.ip,
-      status: device.status,
-      connection: device.connection,
-      service: device.service,
-    });
-    return device; // Return the updated device to the reducer
+    try {
+      const deviceRef = doc(db, "devices", device.id);
+      await updateDoc(deviceRef, {
+        name: device.name,
+        ip: device.ip,
+        status: device.status,
+        connection: device.connection,
+        service: device.service,
+      });
+      console.log("Device updated successfully", device);
+      return device; // Return the updated device to the reducer
+    } catch (error) {
+      console.error("Error updating device: ", error);
+      throw error; // Throw error để Redux xử lý trạng thái rejected
+    }
+  }
+);
+
+// Thunk to add a new device to Firestore
+export const addDevice = createAsyncThunk(
+  "devices/addDevice",
+  async (device: Device) => {
+    try {
+      // Thêm một tài liệu thiết bị mới vào Firestore
+      const deviceRef = await addDoc(collection(db, "devices"), {
+        name: device.name,
+        ip: device.ip,
+        status: device.status,
+        connection: device.connection,
+        service: device.service,
+      });
+      console.log("Device added with ID: ", deviceRef.id);
+      return { ...device, id: deviceRef.id }; 
+    } catch (error) {
+      console.error("Error adding device: ", error);
+      throw error;
+    }
   }
 );
 
@@ -78,6 +109,19 @@ const deviceSlice = createSlice({
       .addCase(updateDevice.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Error updating device";
+      })
+      // Handle adding new device
+      .addCase(addDevice.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addDevice.fulfilled, (state, action) => {
+        state.loading = false;
+        state.devices.push(action.payload); // Thêm thiết bị mới vào mảng
+      })
+      .addCase(addDevice.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || "Error adding device";
       });
   },
 });

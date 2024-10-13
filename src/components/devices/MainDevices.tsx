@@ -46,6 +46,16 @@ const MainDevices: React.FC = () => {
     fetchDevices();
   }, []);
 
+    // Sắp xếp danh sách thiết bị theo số trong ID
+    const sortedDevices = devices.sort((a, b) => {
+      // Lấy phần số từ chuỗi 'KIO_01', 'KIO_08', etc.
+      const numA = parseInt(a.id.replace('KIO_', ''), 10);
+      const numB = parseInt(b.id.replace('KIO_', ''), 10);
+  
+      // Sắp xếp theo giá trị số
+      return numA - numB;
+    });
+
   const filteredDevices = devices.filter(
     (device) =>
       (deviceStatus === "Tất cả" || device.status === deviceStatus) &&
@@ -54,7 +64,7 @@ const MainDevices: React.FC = () => {
       ((typeof device.name === "string" && device.name.includes(searchTerm)) ||
         (typeof device.id === "string" && device.id.includes(searchTerm))) // Kiểm tra kiểu dữ liệu
   );
-
+  
   // Mở rộng hoặc thu gọn nội dung dịch vụ sử dụng
   const handleToggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -80,7 +90,7 @@ const MainDevices: React.FC = () => {
       <div className="devices-buttons-section">
             <button className="devices-add" onClick={handleAddDeviceClick}>
               <img src="/img/btn-add.png" alt="" className="devices-add-icon" />
-              Thêm tài khoản
+              Thêm thiết bị
             </button>
       </div>
 
