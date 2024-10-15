@@ -58,6 +58,7 @@ const MainAddRole: React.FC = () => {
       });
       alert("Vai trò mới đã được thêm thành công!");
       navigate("/roles");
+      window.location.reload();
     } catch (error) {
       console.error("Lỗi khi thêm vai trò:", error);
       alert("Không thể thêm vai trò, vui lòng thử lại.");
