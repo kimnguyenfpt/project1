@@ -50,7 +50,7 @@ const Forgot: React.FC = () => {
                     </div>
                 </form>
             </div>
-            <div className="reset-image">
+            <div className="forgot-password-image">
                 <img src="https://firebasestorage.googleapis.com/v0/b/quanlyxephang-67525.appspot.com/o/reset.png?alt=media&token=9bfec82c-7991-4f8b-b552-cf69dbbb79f4" alt="Reset Password" />
             </div>
         </div>
