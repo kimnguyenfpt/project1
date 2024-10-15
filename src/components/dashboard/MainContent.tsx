@@ -21,7 +21,7 @@ const MainContent = () => {
 
   const stats = [
     {
-      value: "4.221",
+      value: "4",
       change: "32.41%",
       changeType: "positive", 
       icon: "./img/icon1.png",
@@ -34,7 +34,7 @@ const MainContent = () => {
       ),
     },
     {
-      value: "3.721",
+      value: "1",
       change: "32.41%",
       changeType: "negative",
       icon: "./img/icon2.png",
@@ -47,7 +47,7 @@ const MainContent = () => {
       ),
     },
     {
-      value: "468",
+      value: "2",
       change: "56.41%",
       changeType: "positive",
       icon: "./img/icon3.png",
@@ -60,7 +60,7 @@ const MainContent = () => {
       ),
     },
     {
-      value: "32",
+      value: "1",
       change: "22.41%",
       changeType: "negative",
       icon: "./img/icon4.png",
@@ -73,6 +73,8 @@ const MainContent = () => {
       ),
     }
   ];
+
+  
 
   const getLineChartData = () => {
     if (viewType === "Ngày") {

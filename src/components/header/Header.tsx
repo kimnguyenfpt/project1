@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'; // Thêm useRef
+import { useNavigate } from 'react-router-dom'; // Thay thế useHistory bằng useNavigate
 import NotificationDropdown from '../Notification/NotificationDropdown';
 import './Header.css';
 
@@ -7,6 +8,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
+  const navigate = useNavigate(); // Khởi tạo useNavigate
   const [dropdownVisible, setDropdownVisible] = useState<boolean>(false);
   const notificationRef = useRef<HTMLDivElement | null>(null);
 
@@ -37,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
         <img src="/img/user.png" alt="User" className="profile-img" />
         <div className="text-info">
           <span className="welcome">Xin chào</span>
-          <span className="user-name">Lê Quỳnh Ái Vân</span>
+          <span className="user-name" style={{cursor: 'pointer'}} onClick={() => navigate('/profile')}>Lê Quỳnh Ái Vân</span> 
         </div>
       </div>
     </header>

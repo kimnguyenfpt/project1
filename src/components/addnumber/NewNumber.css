@@ -113,3 +113,11 @@ h5{
   cursor: pointer;
   color: #FF9138;
 }
+.customer-name{
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+

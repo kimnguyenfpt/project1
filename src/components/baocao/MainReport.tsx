@@ -5,6 +5,7 @@ import { RootState, AppDispatch } from "../../redux/store";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./MainReport.css";
+import * as XLSX from 'xlsx'; 
 
 const MainReport: React.FC = () => {
   const [filters, setFilters] = useState({
@@ -40,6 +41,12 @@ const MainReport: React.FC = () => {
     }
   };
 
+  const handleDownload = () => { // Thêm hàm tải về
+    const ws = XLSX.utils.json_to_sheet(data); // Chuyển đổi dữ liệu thành sheet
+    const wb = XLSX.utils.book_new(); // Tạo workbook mới
+    XLSX.utils.book_append_sheet(wb, ws, "Report"); // Thêm sheet vào workbook
+    XLSX.writeFile(wb, "report.xlsx"); // Tải về file Excel
+  };
 
   return (
     <div className="queue-management">
@@ -127,11 +134,11 @@ const MainReport: React.FC = () => {
         </span>
       </div>
       <div className="report-buttons-section">
-            <button className="report-add">
-              <img src="/img/download.png" alt="" className="report-add-icon" />
-              Tải về
-            </button>
-          </div>
+        <button className="report-add" onClick={handleDownload}>
+          <img src="/img/download.png" alt="" className="report-add-icon" />
+          Tải về
+        </button>
+      </div>
     </div>
   );
 };

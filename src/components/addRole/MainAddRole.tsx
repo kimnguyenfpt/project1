@@ -26,6 +26,7 @@ const MainAddRole: React.FC = () => {
     y: false,
     z: false,
   });
+  const [quantityusers, setQuantityUsers] = useState<number>(1);
   const navigate = useNavigate();
 
   const handleGroupAChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,6 +54,7 @@ const MainAddRole: React.FC = () => {
           groupA: groupA,
           groupB: groupB,
         },
+        quantityusers: 1, 
       });
       alert("Vai trò mới đã được thêm thành công!");
       navigate("/roles");

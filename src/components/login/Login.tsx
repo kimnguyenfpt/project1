@@ -37,7 +37,7 @@ const Login: React.FC = () => {
                 await signInWithEmailAndPassword(auth, userEmail, password);
                 setErrorMessage('Đăng nhập thành công!');
                 setIsError(false);
-                navigate('/profile');  // Điều hướng tới trang Profile sau khi đăng nhập thành công
+                navigate('/');  
             } else {
                 setErrorMessage('Tên đăng nhập không tồn tại');
                 setIsError(true);

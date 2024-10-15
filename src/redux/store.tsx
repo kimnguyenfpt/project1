@@ -7,6 +7,7 @@ import numberReducer from "./numberSlice";
 import rolesReducer from "./rolesSlice";
 import userReducer from "./userSlice";
 import logReducer from "./logSlice";
+import notificationReducer from "./notificationSlice";
 export const store = configureStore({
   reducer: {
     devices: deviceReducer,
@@ -16,6 +17,7 @@ export const store = configureStore({
     roles: rolesReducer,
     users: userReducer,
     logs: logReducer,
+    notifications: notificationReducer,
   },
 });
 
